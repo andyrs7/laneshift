@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lane Shift</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <!-- Menu for customization -->
+  <div id="menu">
+    <h1>Lane Shift</h1>
+    <label>
+      Choose Shape:
+      <select id="shape-select">
+        <option value="square">Square</option>
+        <option value="circle">Circle</option>
+        <option value="rectangle">Rectangle</option>
+      </select>
+    </label>
+    <label>
+      Choose Color:
+      <input type="color" id="color-picker" value="#4caf50">
+    </label>
+    <label>
+      Upload PNG (optional):
+      <input type="file" id="png-upload" accept="image/*">
+    </label>
+    <button id="start-game">Start Game</button>
+  </div>
+
+  <!-- Game container -->
+  <div id="game-container" style="display:none;">
+    <div id="player"></div>
+    <div id="obstacles"></div>
+    <div id="score">Score: 0</div>
+  </div>
+
+  <!-- Game Over screen -->
+  <div id="game-over">
+    <h1>Game Over</h1>
+    <p id="final-score"></p>
+    <p id="best-score"></p>
+    <button id="restart">Restart</button>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
